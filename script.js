@@ -3,6 +3,7 @@ var total = 0;
 function cleartotal()
 {
    total = 0;
+   document.getElementById("p1").innerHTML = total;
 }
 
 function adder() {
