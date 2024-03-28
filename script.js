@@ -13,6 +13,7 @@ function adder()
    var num1 = parseInt(document.getElementById("myform").elements["num1"].value);
    var num2 = parseInt(document.getElementById("myform").elements["num2"].value);
   
-    total += num1 + num2;
+   total += num1 + num2;
+   document.getElementById("p1").innerHTML = total;
    
 }
