@@ -1,6 +1,6 @@
 var total = 0;
 
-function cleartotal(total)
+function cleartotal()
 {
    total = 0;
 }
