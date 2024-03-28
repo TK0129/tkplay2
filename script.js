@@ -8,7 +8,8 @@ function cleartotal()
 
 function adder() 
 {
-   total = 0;
+   if (total<>0) { total = 0; }
+   
    var num1 = parseInt(document.getElementById("myform").elements["num1"].value);
    var num2 = parseInt(document.getElementById("myform").elements["num2"].value);
   
