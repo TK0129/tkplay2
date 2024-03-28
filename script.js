@@ -1,5 +1,10 @@
 var total = 0;
 
+function cleartotal(total)
+{
+   total = 0;
+}
+
 function adder() {
   var num1 = parseInt(document.getElementById("myform").elements["num1"].value);
   var num2 = parseInt(document.getElementById("myform").elements["num2"].value);
