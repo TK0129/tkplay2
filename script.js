@@ -58,6 +58,11 @@ function Lumpadd()
 {
    in  x;
    x = 0;
-   x = auto1l + auto5l + auto8l;
+
+   var num1 = parseInt(document.getElementById("myform").elements["auto1l"].value);
+   var num2 = parseInt(document.getElementById("myform").elements["auto5l"].value);
+   var num3 = parseInt(document.getElementById("myform").elements["auto8l"].value);
+
+   x += num1 + num2 + num3;
    document.getElementById("p4").innerHTML = x;
 }
