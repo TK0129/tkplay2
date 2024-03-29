@@ -11,7 +11,10 @@ td, th {
     padding: 8px;
 }
 
-  indentsubcat {
-    text-indent: 10px;
-  }
+td.padding10 {
+    padding: 10px;
+}
 
+td.padding20 {
+    padding: 20px;
+}
