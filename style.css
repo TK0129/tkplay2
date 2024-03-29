@@ -2,7 +2,7 @@ table {
     background-color: beige;
     font-family: Baskerville;
     border-collapse: collapse;
-    width: 50%;
+    width: 100%;
 }
 
 td, th {
