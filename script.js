@@ -45,10 +45,10 @@ function autoadd() {
 function lumpadd() {
    if (total > 0) { total = 0; }
 
-    var num1 = parseInt(document.getElementById("myform").elements["auto1l"].value);
-    var num2 = parseInt(document.getElementById("myform").elements["auto5l"].value);
-    var num3 = parseInt(document.getElementById("myform").elements["auto8l"].value);
+    var num11 = parseInt(document.getElementById("myform").elements["auto1l"].value);
+    var num12 = parseInt(document.getElementById("myform").elements["auto5l"].value);
+    var num13 = parseInt(document.getElementById("myform").elements["auto8l"].value);
 
-   total += num1 + num2 + num3;
+   total += num11 + num12 + num13;
     document.getElementById("p4").innerHTML = total;
 }
