@@ -32,24 +32,3 @@ function adder() {
     total += num1 + num2;
     document.getElementById("p1").innerHTML = total;
 }
-
-function autoadd() {
-   var x;
-   x = 0;
-   for (int i = 0; i < 12; i++ ) {
-   x = x + auto[i];
-   }
-    document.getElementById("p3").innerHTML = x;
-}
-
-
-function lumpadd() {
-   if (totall > 0) { totall = 0; }
-
-    var auto1l = parseInt(document.getElementById("myform").elements["auto1l"].value);
-    var auto5l = parseInt(document.getElementById("myform").elements["auto5l"].value);
-    var auto8l = parseInt(document.getElementById("myform").elements["auto8l"].value);
-
-   totall = auto1l + auto5l + auto8l ;
-    document.getElementById("p4").innerHTML = totall;
-}
