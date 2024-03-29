@@ -5,6 +5,13 @@ table {
     width: 100%;
 }
 
+table2 {
+    background-color: cornsilk;
+    font-family: Baskerville;
+    border-collapse: collapse;
+    width: 40px;
+}
+
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
