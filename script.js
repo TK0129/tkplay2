@@ -12,6 +12,10 @@ var auto9 = 0;
 var auto10 = 0;
 var auto11 = 0;
 
+var auto1l = 0;
+var auto51 = 0;
+var auto81 = 0;
+
 
 function cleartotal()
 {
@@ -52,9 +56,8 @@ function autoadd()
 
 function Lumpadd()
 {
-   in i, x;
+   in  x;
    x = 0;
-   for (i=1 to 11)
-   x = x + auto[i]l;
+   x = auto1l + auto5l + auto8l;
    document.getElementById("p4").innerHTML = x;
 }
