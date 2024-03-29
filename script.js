@@ -1,4 +1,5 @@
 var total = 0;
+var totall = 0;
 
 var auto1 = 0;
 var auto2 = 0;
@@ -43,12 +44,12 @@ function autoadd() {
 
 
 function lumpadd() {
-   if (total > 0) { total = 0; }
+   if (totall > 0) { totall = 0; }
 
-    var num11 = parseInt(document.getElementById("myform").elements["auto1l"].value);
-    var num12 = parseInt(document.getElementById("myform").elements["auto5l"].value);
-    var num13 = parseInt(document.getElementById("myform").elements["auto8l"].value);
+    var auto1l = parseInt(document.getElementById("myform").elements["auto1l"].value);
+    var auto5l = parseInt(document.getElementById("myform").elements["auto5l"].value);
+    var auto8l = parseInt(document.getElementById("myform").elements["auto8l"].value);
 
-   total += num11 + num12 + num13;
-    document.getElementById("p4").innerHTML = total;
+   totall = auto1l + auto5l + auto8l ;
+    document.getElementById("p4").innerHTML = totall;
 }
