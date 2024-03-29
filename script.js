@@ -1,5 +1,18 @@
 var total = 0;
 
+var auto1 = 0;
+var auto2 = 0;
+var auto3 = 0;
+var auto4 = 0;
+var auto5 = 0;
+var auto6 = 0;
+var auto7 = 0;
+var auto8 = 0;
+var auto9 = 0;
+var auto10 = 0;
+var auto11 = 0;
+
+
 function cleartotal()
 {
    total = 0;
@@ -16,4 +29,32 @@ function adder()
    total += num1 + num2;
    document.getElementById("p1").innerHTML = total;
    
+}
+
+function clearall()
+{
+   int ar[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 }
+   int i, x;
+   for (i=1 to 11)
+   auto[i]=0;
+   document.getElementById("p2").innerHTML = auto1;
+}
+
+function autoadd()
+{
+   in i, x;
+   x = 0;
+   for (i=1 to 11)
+   x = x + auto[i];
+   document.getElementById("p3").innerHTML = total;
+}
+
+
+function Lumpadd()
+{
+   in i, x;
+   x = 0;
+   for (i=1 to 11)
+   x = x + autol[i];
+   document.getElementById("p3").innerHTML = total;
 }
