@@ -46,7 +46,7 @@ function clearall()
 
 function autoadd()
 {
-   in i, x;
+   int i, x;
    x = 0;
    for (i=1 to 11)
    x = x + auto[i];
@@ -54,9 +54,9 @@ function autoadd()
 }
 
 
-function Lumpadd()
+function lumpadd()
 {
-   in  x;
+   int  x;
    x = 0;
 
    var num1 = parseInt(document.getElementById("myform").elements["auto1l"].value);
