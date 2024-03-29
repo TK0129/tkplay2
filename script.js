@@ -39,8 +39,9 @@ function clearall()
 {
    int ar[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 }
    int i, x;
-   for (i=1 to 11)
-   auto[i]=0;
+   for (int i = 1; 1 < 12) {
+   auto[i]=0; 
+   }
    document.getElementById("p2").innerHTML = auto1;
 }
 
@@ -48,21 +49,21 @@ function autoadd()
 {
    int i, x;
    x = 0;
-   for (i=1 to 11)
+   for (int i = 1 to 11) {
    x = x + auto[i];
+   }
    document.getElementById("p3").innerHTML = x;
 }
 
 
 function lumpadd()
 {
-   int  x;
-   x = 0;
+   if (total > 0) { total = 0; }
 
    var num1 = parseInt(document.getElementById("myform").elements["auto1l"].value);
    var num2 = parseInt(document.getElementById("myform").elements["auto5l"].value);
    var num3 = parseInt(document.getElementById("myform").elements["auto8l"].value);
 
-   x += num1 + num2 + num3;
-   document.getElementById("p4").innerHTML = x;
+   total += num1 + num2 + num3;
+   document.getElementById("p4").innerHTML = total;
 }
