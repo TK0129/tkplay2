@@ -46,7 +46,7 @@ function autoadd()
    x = 0;
    for (i=1 to 11)
    x = x + auto[i];
-   document.getElementById("p3").innerHTML = total;
+   document.getElementById("p3").innerHTML = x;
 }
 
 
@@ -55,6 +55,6 @@ function Lumpadd()
    in i, x;
    x = 0;
    for (i=1 to 11)
-   x = x + autol[i];
-   document.getElementById("p3").innerHTML = total;
+   x = x + auto[i]l;
+   document.getElementById("p4").innerHTML = x;
 }
