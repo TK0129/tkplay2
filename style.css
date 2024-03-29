@@ -11,10 +11,20 @@ td, th {
     padding: 8px;
 }
 
+
+
+/*  ----------  Padding - START  --------  */
+
 td.padding10 {
-    padding: 10px;
+    padding-left: 10px;
 }
 
 td.padding20 {
-    padding: 20px;
+    padding-left: 20px;
 }
+
+td.padding30 {
+    padding-left: 30px;
+}
+
+/*  ----------  Padding - END  ----------    */
