@@ -33,22 +33,21 @@ function adder() {
     document.getElementById("p1").innerHTML = total;
 }
 
-
-
-//  -----------------------  test code below to learn  ---------------------------------
-
+//  --------------------------  test code below to learn  -------------------------
 
 //  function to add all the Lump Sum values
 function test1() {
-   const values = Array.from(document.querySelectorAll('#table tr td'))
+  const values = Array.from(document.querySelectorAll('#table tr td'))
               .map(td => td.innerHTML);
 
-  document.getElementById("p4").innerHTML = values(2);
-  // document.getElementById("p1").innerHTML = "testing";
+  // document.getElementById("p4").innerHTML = values(2);
+     document.getElementById("p4").innerHTML = "testing";
    
- // alert("testing pop up window A1");
-  alert(values(1));
+  // alert("testing pop up window A1");
 
+  let t = 7;
+  alert(t);
    
- //  console.log(values) // [1, 2, 3 ... 9]
+  // alert(values(1));
+  // console.log(values) // [1, 2, 3 ... 9]
 }
