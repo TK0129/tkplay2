@@ -42,16 +42,16 @@ function test1() {
 
 
   
-  document.getElementById("p4").innerHTML = array(2);
-  document.getElementById("p3").innerHTML = "testing 1A";
-  document.getElementById("p3").innerHTML = "testing 2A";
+  //document.getElementById("p4").innerHTML = array(2);
+  //document.getElementById("p3").innerHTML = "testing 1A";
+  //document.getElementById("p3").innerHTML = "testing 2A";
    
    
   // alert("testing pop up window A1");
 
-  let t = 7;
-  // alert(t);
+  let t = array(4);
+  alert(t);
    
-  alert(array(1));
+  // alert(array(1));
   // console.log(values) // [1, 2, 3 ... 9]
 }
