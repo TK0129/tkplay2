@@ -41,16 +41,22 @@ function test1() {
               .map(td => td.innerHTML);
 
 
-  document.getElementById("p3").innerHTML = "testing 1A";
+  document.getElementById("p3").innerHTML = "testing 2";
   //document.getElementById("p4").innerHTML = array(2);
-  //document.getElementById("p3").innerHTML = "testing 2A";
-   
    
   // alert("testing pop up window A1");
 
-  //let t = array(4);
+  consol.log("data start")
+  let t = 7;
+  console.log(t);
   //alert(t);
+
+  consol.log("Array 1")
+  for (i = 0; i < array.length; i++)
+    consol.log((i+1) + ": " + array[i]);
    
-  // alert(array(1));
-  console.log(values) // [1, 2, 3 ... 9]
+  consol.log("Array 2")
+  console.log(array); // [1, 2, 3 ... 9]
+
+   consol.log("data end")
 }
