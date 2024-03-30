@@ -37,7 +37,7 @@ function adder() {
 
 //  function to add all the Lump Sum values
 function test1() {
-  const values = Array.from(document.querySelectorAll('table1 tr td'))
+  const values = Array.from(document.querySelectorAll('#table1 tr td'))
               .map(td => td.innerHTML);
 
 
