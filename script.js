@@ -41,9 +41,9 @@ function test1() {
               .map(td => td.innerHTML);
 
 
-  document.getElementById("p3").innerHTML = "testing";
+  document.getElementById("p3").innerHTML = "testing 1";
   document.getElementById("p4").innerHTML = array(2);
-  
+  document.getElementById("p3").innerHTML = "testing 2";
    
   // alert("testing pop up window A1");
 
