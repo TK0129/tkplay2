@@ -47,16 +47,16 @@ function test1() {
   // alert("testing pop up window A1");
 
   consol.log("data start")
-  let t = 7;
-  console.log(t);
-  //alert(t);
+  
+    let t = 7;
+    console.log(t);
 
-  consol.log("Array 1")
-  for (i = 0; i < array.length; i++)
-    consol.log((i+1) + ": " + array[i]);
+    consol.log("Array 1")
+    for (i = 0; i < array.length; i++)
+      console.log((i+1) + ": " + array[i]);
    
-  consol.log("Array 2")
-  console.log(array); // [1, 2, 3 ... 9]
+    console.log("Array 2")
+    console.log(array); // [1, 2, 3 ... 9]
 
-   consol.log("data end")
+  console.log("data end")
 }
