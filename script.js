@@ -42,5 +42,5 @@ function lumpadd() {
     var auto8l = parseInt(document.getElementById("myform2").elements["auto8l"].value);
 
    totall = auto1l + auto5l + auto8l ;
- //   document.getElementById("p4").innerHTML = totall;
+   document.getElementById("p4").innerHTML = totall;
 }
