@@ -46,8 +46,8 @@ function test1() {
   document.getElementById("p4").innerHTML = values;
   // document.getElementById("p1").innerHTML = "testing";
    
-   alert("output");
-   alery(vaules);
+  // alert("output");
+   alert(vaules);
 
  //  console.log(values) // [1, 2, 3 ... 9]
 }
