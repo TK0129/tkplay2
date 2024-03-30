@@ -42,6 +42,8 @@ function adder() {
 function test1() {
    const values = Array.from(document.querySelectorAll('#table tr td'))
               .map(td => td.innerHTML);
+   alert("output");
+   alery(vaules);
 
-   console.log(values) // [1, 2, 3 ... 9]
+ //  console.log(values) // [1, 2, 3 ... 9]
 }
