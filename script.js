@@ -46,17 +46,17 @@ function test1() {
    
   // alert("testing pop up window A1");
 
-  console.log("data start")
+  console.log("data start 1")
   
     let t = 7;
     console.log(t);
 
     console.log("Array 1")
-    for (i = 0; i < array.length; i++)
-      console.log((i+1) + ": " + array[i]);
+    for (i = 0; i < values.length; i++)
+      console.log((i+1) + ": " + values[i]);
    
     console.log("Array 2")
-    console.log(array); // [1, 2, 3 ... 9]
+    console.log(values); // [1, 2, 3 ... 9]
 
   console.log("data end")
 }
