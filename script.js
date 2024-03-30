@@ -33,14 +33,15 @@ function adder() {
     document.getElementById("p1").innerHTML = total;
 }
 
+
+
+//  -----------------------  test code below to learn  ---------------------------------
+
+
 //  function to add all the Lump Sum values
-function lumpadd() {
-   if (totall > 0) { totall = 0; }
+function test1() {
+   const values = Array.from(document.querySelectorAll('#table tr td'))
+              .map(td => td.innerHTML);
 
-    var auto1l = parseInt(document.getElementById("myform2").elements["auto1l"].value);
-    var auto5l = parseInt(document.getElementById("myform2").elements["auto5l"].value);
-    var auto8l = parseInt(document.getElementById("myform2").elements["auto8l"].value);
-
-   totall = auto1l + auto5l + auto8l ;
-   document.getElementById("p4").innerHTML = totall;
+   console.log(values) // [1, 2, 3 ... 9]
 }
