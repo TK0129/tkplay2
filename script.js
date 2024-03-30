@@ -40,8 +40,10 @@ function test1() {
   const values = Array.from(document.querySelectorAll('#table tr td'))
               .map(td => td.innerHTML);
 
-  document.getElementById("p4").innerHTML = array(2);
+
   document.getElementById("p3").innerHTML = "testing";
+  document.getElementById("p4").innerHTML = array(2);
+  
    
   // alert("testing pop up window A1");
 
