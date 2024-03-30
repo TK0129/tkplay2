@@ -36,6 +36,26 @@ function adder() {
 //  --------------------------  test code below to learn  -------------------------
 
 //  function to add all the Lump Sum values
+function test2() {
+   
+  var i;
+  let testarray1 = new Array(0, 1, 2);
+
+  document.getElementById("p3").innerHTML = "testing test2 1";
+    
+  console.log("write testarray1 1");
+    for (i = 0; i < testarray1.length; i++)
+      console.log((i+1) + ": " + testarray1[i]);
+  
+  console.log("data end");
+}
+
+
+//  -------------------------------------------------------------------------------
+//  --------------------------  test code below to learn  -------------------------
+//  -------------------------------------------------------------------------------
+
+//  function to add all the Lump Sum values
 function test1() {
 //  const values = Array.from(document.querySelectorAll('#table1 tr td'))
 //              .map(td => td.innerHTML);
@@ -43,7 +63,7 @@ function test1() {
 var t1 = document.getElementById("table1");
 for (var r = 0; r < t1.rows.length; r++) {
     for (var c = 0; c < t1.rows[r].cells.length; c++) {
-        console.log(t1.rows[r].cells[c].innerHTML)
+        console.log(t1.rows[r].cells[c].innerHTML);
     }
 }
 
@@ -63,7 +83,7 @@ for (var r = 0; r < t1.rows.length; r++) {
       console.log((i+1) + ": " + t1[i]);
    
     console.log("t1 write 2");
-    console.log(t); // [1, 2, 3 ... 9]
+    console.log(t1); // [1, 2, 3 ... 9]
 
   console.log("data end");
 }
