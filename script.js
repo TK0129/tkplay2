@@ -53,13 +53,13 @@ for (var r = 0; r < t1.rows.length; r++) {
    
   // alert("testing pop up window A1");
 
-  console.log("data start 2");
+  console.log("data start 3");
   
     let t = 7;
     console.log(t);
 
     console.log("t1 write 1");
-    for (i = 0; i < T1.length; i++)
+    for (i = 0; i < t1.length; i++)
       console.log((i+1) + ": " + t1[i]);
    
     console.log("t1 write 2");
