@@ -43,7 +43,7 @@ function test1() {
 var t1 = document.getElementById("table1");
 for (var r = 0; r < t1.rows.length; r++) {
     for (var c = 0; c < t1.rows[r].cells.length; c++) {
-        alert(t1.rows[r].cells[c].innerHTML)
+        console.log(t1.rows[r].cells[c].innerHTML)
     }
 }
 
