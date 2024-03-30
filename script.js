@@ -46,12 +46,12 @@ function test1() {
    
   // alert("testing pop up window A1");
 
-  consol.log("data start")
+  console.log("data start")
   
     let t = 7;
     console.log(t);
 
-    consol.log("Array 1")
+    console.log("Array 1")
     for (i = 0; i < array.length; i++)
       console.log((i+1) + ": " + array[i]);
    
