@@ -36,11 +36,12 @@ function adder() {
 //  --------------------------  test code below to learn  -------------------------
 
 //  function to add all the Lump Sum values
-function test2() {
+function test2(daynum,daysinyear) {
    
   var i;
   let testarray1 = new Array(0, 1, 2);
 
+  testarray1[1] = daynum ;
   document.getElementById("p3").innerHTML = "testing test2 1";
     
   console.log("write testarray1 1");
