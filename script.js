@@ -40,10 +40,14 @@ function test2(daynum, daysinyear) {
   var i;
   let testarray1 = new Array(0, 1, 2);
 
+  console.log("write testarray1 3A");
+    for (i = 0; i < testarray1.length; i++)
+      console.log((i+1) + ": " + testarray1[i]);
+   
   testarray1[1] = daynum;
   document.getElementById("p3").innerHTML = "testing test2 1";
     
-  console.log("write testarray1 3");
+  console.log("write testarray1 3B");
     for (i = 0; i < testarray1.length; i++)
       console.log((i+1) + ": " + testarray1[i]);
   
