@@ -44,7 +44,7 @@ function test2(daynum, daysinyear) {
     for (i = 0; i < testarray1.length; i++)
       console.log((i+1) + ": " + testarray1[i]);
    
-  testarray1[1] = daynum;
+ //  testarray1[1] = daynum;
   document.getElementById("p3").innerHTML = "testing test2 1";
     
   console.log("write testarray1 3B");
