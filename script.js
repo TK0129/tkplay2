@@ -17,9 +17,6 @@ var auto1l = 0;
 var auto51 = 0;
 var auto81 = 0;
 
-var daynum;
-var daysinyear;
-
 function cleartotal() {
    total = 0;
     document.getElementById("p1").innerHTML = total;
@@ -38,7 +35,7 @@ function adder() {
 //  --------------------------  test code below to learn  -------------------------
 
 //  function to add all the Lump Sum values
-function test2(daynum, daysinyear) {
+function test2() {
    
   var i;
   let testarray1 = new Array(0, 1, 2);
@@ -46,8 +43,9 @@ function test2(daynum, daysinyear) {
   console.log("write testarray1 3A");
     for (i = 0; i < testarray1.length; i++)
       console.log((i+1) + ": " + testarray1[i]);
-   
-  testarray1[1] = daynum;
+
+  let themsg = document.getElementById("daynum").value;
+  testarray1[1] = themsg;
   document.getElementById("p3").innerHTML = "testing test2 1";
     
   console.log("write testarray1 3B");
