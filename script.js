@@ -17,7 +17,6 @@ var auto1l = 0;
 var auto51 = 0;
 var auto81 = 0;
 
-
 function cleartotal() {
    total = 0;
     document.getElementById("p1").innerHTML = total;
@@ -41,10 +40,10 @@ function test2(daynum, daysinyear) {
   var i;
   let testarray1 = new Array(0, 1, 2);
 
-  testarray1[1] = daynum ;
+  testarray1[1] = daynum;
   document.getElementById("p3").innerHTML = "testing test2 1";
     
-  console.log("write testarray1 2");
+  console.log("write testarray1 3");
     for (i = 0; i < testarray1.length; i++)
       console.log((i+1) + ": " + testarray1[i]);
   
