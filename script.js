@@ -18,6 +18,7 @@ var auto51 = 0;
 var auto81 = 0;
 
 var daynum;
+var daysinyear;
 
 function cleartotal() {
    total = 0;
