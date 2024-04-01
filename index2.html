@@ -19,6 +19,7 @@
                 fr.onload = function () {
                     document.getElementById('output')
                         .textContent = fr.result;
+                    console.log(lines);   // trying this line tk01
                 }
  
                 fr.readAsText(this.files[0]);
