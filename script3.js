@@ -1,16 +1,23 @@
 function readmyfile() {
   
-  BufferedReader abc = new BufferedReader(new FileReader(LumpSum.txt));
-  List<String> lines = new ArrayList<String>();
-  
-  while((line = abc.readLine()) != null) {
-    lines.add(line);
-    System.out.println(data);
-  }
-  
-  abc.close();
-  
-  // If you want to convert to a String[]
-  String[] data = lines.toArray(new String[]{});
+var file = document.getElementById('inputfile');
 
+file.addEventListener('change', () => {
+    var txtArr = [];
+    var fr = new FileReader();
+    fr.onload = function() {
+        // By lines
+        var lines = this.result.split('\n');
+        for (var line = 0; line < lines.length; line++) {
+            txtArr = [...txtArr, ...(lines[line].split("-"))];
+        }
+    }
+    fr.onloadend = function() {
+        console.log(txtArr);
+        document.getElementById('output').textContent=txtArr.join("");
+    }
+
+    fr.readAsText(file.files[0]);
+})
+  
 }
