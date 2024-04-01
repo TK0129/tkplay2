@@ -1,9 +1,15 @@
 function readmyfile() {
 
-  var fs = import('fs');
-  var contents = fs.readFileSync('C:\Users\tlk01\Documents\TK data\Budget web page doc.LumpSum.txt', 'utf8');
-  var lines = contents.split('/\r?\n/');
-
-  console.log(lines);
+  BufferedReader abc = new BufferedReader(new FileReader(LumpSum.txt));
+  List<String> lines = new ArrayList<String>();
+  
+  while((line = abc.readLine()) != null) {
+      lines.add(line);
+      System.out.println(data);
+  }
+  abc.close();
+  
+  // If you want to convert to a String[]
+  String[] data = lines.toArray(new String[]{});
 
 }
