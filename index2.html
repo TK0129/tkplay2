@@ -3,6 +3,8 @@
  
 <head>
     <title>Read Text File</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
  
 <body>
@@ -12,27 +14,34 @@
     <pre id="output"></pre>
  
     <script type="text/javascript">
-     
-        console.log("index2.html 04");
-     
-        document.getElementById('inputfile')
-            .addEventListener('change', function () {
- 
-                let fr = new FileReader();
-                fr.onload = function () {
-                    document.getElementById('output')
-                        .textContent = fr.result;
-                
-                }
-             
-                //  fr.readAsArrayBuffer(this.files[0]);
-             
-                fr.readAsText(this.files[0]);
 
-                console.log(output);   // trying this line tk02
-             
-            })
-    </script>
+
+
+var file = document.getElementById('inputfile');
+
+file.addEventListener('change', () => {
+    var txtArr = [];
+    var fr = new FileReader();
+    fr.onload = function() {
+        // By lines
+        var lines = this.result.split('\n');
+        for (var line = 0; line < lines.length; line++) {
+            txtArr = [...txtArr, ...(lines[line].split("-"))];
+        }
+    }
+    fr.onloadend = function() {
+        console.log(txtArr);
+        document.getElementById('output').textContent=txtArr.join("");
+    }
+
+    fr.readAsText(file.files[0]);
+})
+
+
+
+
+	</script>
 </body>
  
 </html>
+
