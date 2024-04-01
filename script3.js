@@ -2,6 +2,9 @@ function readmyfile() {
   
 var file = document.getElementById('inputfile');
 
+// This script will actually read from a file into an array, and output to web page
+// and output to the console log
+  
 file.addEventListener('change', () => {
     var txtArr = [];
     var fr = new FileReader();
