@@ -7,5 +7,5 @@ function readmyfile() {
 
   var lines = contents.split(‘/\r?\n/’);
 
-console.log(lines);
+  console.log(lines);
 }
