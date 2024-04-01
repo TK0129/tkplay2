@@ -13,7 +13,7 @@
  
     <script type="text/javascript">
      
-        console.log("index2.html 01");
+        console.log("index2.html 02");
      
         document.getElementById('inputfile')
             .addEventListener('change', function () {
@@ -22,10 +22,13 @@
                 fr.onload = function () {
                     document.getElementById('output')
                         .textContent = fr.result;
-                    console.log(output);   // trying this line tk02
+                
                 }
  
                 fr.readAsText(this.files[0]);
+
+                console.log(output);   // trying this line tk02
+             
             })
     </script>
 </body>
