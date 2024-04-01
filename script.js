@@ -40,7 +40,7 @@ function test2() {
   var i;
   let testarray1 = new Array(0, 1, 2);
 
-  console.log("write testarray1 3A");
+  console.log("write testarray1 3b");
     for (i = 0; i < testarray1.length; i++)
       console.log((i+1) + ": " + testarray1[i]);
 
