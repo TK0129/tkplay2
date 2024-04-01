@@ -13,7 +13,7 @@
  
     <script type="text/javascript">
      
-        console.log("index2.html 02");
+        console.log("index2.html 03");
      
         document.getElementById('inputfile')
             .addEventListener('change', function () {
@@ -24,8 +24,10 @@
                         .textContent = fr.result;
                 
                 }
- 
-                fr.readAsText(this.files[0]);
+             
+                fr.readAsArrayBuffer(this.files[0]);
+             
+             //   fr.readAsText(this.files[0]);
 
                 console.log(output);   // trying this line tk02
              
