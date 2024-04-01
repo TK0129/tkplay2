@@ -1,5 +1,5 @@
 
-function readfile() {
+function readmyfile() {
   
   var fs = require(‘fs’);
 
