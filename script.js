@@ -46,7 +46,7 @@ function test2() {
 
   let themsg = document.getElementById("daynum").value;
   testarray1[1] = themsg;
-//  document.getElementById("p3").innerHTML = "testing test2 1";
+ //  document.getElementById("p3").innerHTML = "testing test2 1";
     
   console.log("write testarray1 4B");
     for (i = 0; i < testarray1.length; i++)
