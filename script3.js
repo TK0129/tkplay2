@@ -5,7 +5,7 @@ var file = document.getElementById('inputfile');
 // This script will actually read from a file into an array, and output to web page
 // and output to the console log
 
-console.log("script3.js 01");
+console.log("script3.js 02");
   
 file.addEventListener('change', () => {
     var txtArr = [];
@@ -14,7 +14,7 @@ file.addEventListener('change', () => {
         // By lines
         var lines = this.result.split('\n');
         for (var line = 0; line < lines.length; line++) {
-            txtArr = [...txtArr, ...(lines[line].split("-"))];
+            txtArr = [...txtArr, ...(lines[line].split(" -"))];
         }
     }
     fr.onloadend = function() {
