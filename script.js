@@ -37,7 +37,7 @@ function adder() {
 //  function to add all the Lump Sum values
 function test2() {
 
-  var daynum1 = parseInt(document.getElementById("idt2").elements["daynum"].value);
+  var daynum = parseInt(document.getElementById("idt2").elements["daynum"].value);
    
   var i;
   let testarray1 = new Array(0, 1, 2);
@@ -46,7 +46,7 @@ function test2() {
     for (i = 0; i < testarray1.length; i++)
       console.log((i+1) + ": " + testarray1[i]);
 
-  let themsg = document.getElementById("daynum1").value;
+  let themsg = document.getElementById("daynum").value;
   testarray1[1] = themsg;
  //  document.getElementById("p3").innerHTML = "testing test2 1";
     
