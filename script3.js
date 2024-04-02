@@ -14,7 +14,7 @@ file.addEventListener('change', () => {
         // By lines
         var lines = this.result.split('\n');
         for (var line = 0; line < lines.length; line++) {
-            txtArr = [...txtArr, ...(lines[line].split("-"))];
+            txtArr = [...txtArr, ...(lines[line].split("-").replace(/[\r]+/g, ''))];
         }
     }
     fr.onloadend = function() {
