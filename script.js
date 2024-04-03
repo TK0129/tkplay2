@@ -24,34 +24,22 @@ function cleartotal() {
 
 function adder() {
    if (total > 0) { total = 0; }
-
-    console.log("init-num1", num1);
-    console.log("init-num2 , num2);
    
-    var num1 = parseInt(document.getElementById("myform").elements["num1"].value);
-    var num2 = parseInt(document.getElementById("myform").elements["num2"].value);
+    var num1a = parseInt(document.getElementById("myform").elements["num1"].value);
+    var num2a = parseInt(document.getElementById("myform").elements["num2"].value);
 
-    console.log("num1");
-    console.log(num1);
-    console.log("num2");
-    console.log(num2);
-    console.log("num1a");
-    console.log(num1a);
-    console.log("num2a");
-    console.log(num2a);
+    console.log("num1a" ,num1a);
+    console.log("num2a" ,num2a);
    
     var n1 = num1a.toFixed(2);
     var n2 = num2a.toFixed(2);
    
-    console.log("n1");
-    console.log(n1);
-    console.log("n2");
-    console.log(n2);
+    console.log("n1", n1);
+    console.log("n2", n2);
    
     total = n1 + n2;
 
-    console.log("total");
-    console.log(total);
+    console.log("total", total);
    
     document.getElementById("p1").innerHTML = total;
 }
