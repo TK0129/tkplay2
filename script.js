@@ -1,21 +1,6 @@
 var total = 0;
 var totall = 0;
 
-var auto1 = 0;
-var auto2 = 0;
-var auto3 = 0;
-var auto4 = 0;
-var auto5 = 0;
-var auto6 = 0;
-var auto7 = 0;
-var auto8 = 0;
-var auto9 = 0;
-var auto10 = 0;
-var auto11 = 0;
-
-var auto1l = 0;
-var auto51 = 0;
-var auto81 = 0;
 
 function cleartotal() {
    total = 0;
@@ -44,6 +29,33 @@ function adder() {
    
     document.getElementById("p1").innerHTML = total;
 }
+
+//  --------------------------  Code to Total Lump sum column  -------------------------
+
+
+function LumpSum() {
+
+	total = 0;
+	
+    var A1Ll = parseFloat(document.getElementById("A1L").value);
+	var A6Ll = parseFloat(document.getElementById("A6L").value);
+	var A9Ll = parseFloat(document.getElementById("A9L").value);
+   
+	console.log("LumpSum Start");
+	console.log("total", total);
+	console.log("A1Ll", A1Ll);
+	console.log("A6Ll", A6Ll);
+	console.log("A9Ll", A9Ll);
+	
+	total = parseFloat(A1Ll) + parseFloat(A6Ll) + parseFloat(A9Ll);
+ 
+	console.log("total", total);
+	
+	document.getElementById("AutoTL").value = parseFloat(total).toFixed(2);
+	
+	console.log("LumpSum End");
+}
+
 
 //  --------------------------  readdata to read data from table  -------------------------
 
@@ -80,12 +92,16 @@ for (i = 0; i < rowLength; i++) {
 
 //  --------------------------  test code below to learn  -------------------------
 
-//  function to add all the Lump Sum values
+//  function to test reading a table cell and storing it in an array 
+//  one element from the array is stored into the table as a test 
 function test2() {
 
- var daynum = parseInt(document.getElementById("iddaynum").elements["daynum"].value);
+    var Autoi1 = parseFloat(document.getElementById("Autoi").value);
+ // var daynum = parseInt(document.getElementById("iddaynum").elements["autoi"].value);
  // const daynum = parseInt(document.getElementById("idt2").getElementsByClassName("t2").elements["daynum"].value);
    
+  console.log("Autoi1", Autoi1);
+  
   var i;
   let testarray1 = new Array(0, 1, 2);
 
@@ -93,14 +109,15 @@ function test2() {
     for (i = 0; i < testarray1.length; i++)
       console.log((i+1) + ": " + testarray1[i]);
 
-  let themsg = document.getElementById("daynum").value;
+  let themsg = document.getElementById("Autoi").value;
   testarray1[1] = themsg;
  //  document.getElementById("p3").innerHTML = "testing test2 1";
     
   console.log("write testarray1 4B");
     for (i = 0; i < testarray1.length; i++)
       console.log((i+1) + ": " + testarray1[i]);
-  
+ 
+  document.getElementById("Autotot").value = testarray1[1]; 
   console.log("data end");
 }
 
