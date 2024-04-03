@@ -24,9 +24,10 @@ function cleartotal() {
 
 function adder() {
    if (total > 0) { total = 0; }
+
    
-    var num1a = parseInt(document.getElementById("myform").elements["num1"].value);
-    var num2a = parseInt(document.getElementById("myform").elements["num2"].value);
+    var num1a = parseFloat(document.getElementById("myform").elements["num1"].value);
+    var num2a = parseFloat(document.getElementById("myform").elements["num2"].value);
 
     console.log("num1a" ,num1a);
     console.log("num2a" ,num2a);
@@ -37,7 +38,7 @@ function adder() {
     console.log("n1", n1);
     console.log("n2", n2);
    
-    total = n1 + n2;
+    total = parseFloat(n1) + parseFloat(n2);
 
     console.log("total", total);
    
