@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>    tkplay2 update 16   </title>
+    <title>    tkplay2 update 17   </title>
     
     <!--  Style Sheet Location   -->
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -33,8 +33,8 @@
       <button onclick="cleartotal()"> Clear Total</button><br><br>
     
       <form id="myform">
-        First Number:   <input type="text" name="num1">  <br /><br /> 
-        Second Number:  <input type="number" name="num2">  <br /><br />
+        First Number:   <input type="number" name="num1">  		<br /><br /> 
+        Second Number:  <input type="number" name="num2">  		<br /><br />
       </form>
     
       <button onclick="adder()"> Submit</button><br><br>
@@ -51,24 +51,47 @@
     
     <!-- Creating the table headers -->
       <div>
-      <table class="t2">
+      <table class="t2" id="table2">
+	  
         <tr>
-          <td>       Days in the Year              </td>
-          <td>       Current Day                   </td> 
-          <td>       testing                       </td>  
+          <td>       Catgory/SubCatagory       						    	</td>
+          <td>       Lump Sum                					    	  	</td> 
+          <td>       Catagory Data        					     	    	</td> 
+          <td>       SubCatagory Data										</td>		  
         </tr>
+		
         <tr>
-          
-          <td id="iddaynum">       <input type="number" name="daynum">          </td>
-          
-          <td>       <input id="idt2" type="text" name="daysinyear">        </td>
-          
-          <td></td>
+          <td>       Auto          											</td>
+		  <td>																</td>
+          <td>       <input type="number" name="Auto">        				</td>
+		  <td>																</td>
         </tr>
+		
+		<tr>
+          <td  style="padding-left:30px">       AAA Membership         		</td>
+		  <td>		<input type="number" name="AAAMemLS">					</td>
+		  <td>																</td>
+          <td>      <input type="number" name="AAAMem">        				</td>
+        </tr>
+		
+		<tr>
+          <td  style="padding-left:30px">       Alternate Transportation   	</td>
+		  <td>																</td>
+		  <td>																</td>
+          <td>      <input type="number" name="AutoAltTrans">        		</td>
+        </tr>	
+		
+		<tr>
+          <td  style="padding-left:30px">       Auto Loan				   	</td>
+		  <td>																</td>
+		  <td>																</td>
+          <td>      <input type="number" name="AutoAutoLoan">        		</td>
+        </tr>	
+		
       </table>    <br />
       </div>
     
-    <button onclick="test2()"> Call test2 </button><br><br>
+    <button onclick="readtable()"> Call readtable </button><br><br>
     <p id="p3">text here</p>
     <p id="p4">data here</p>
 
@@ -90,7 +113,7 @@
             which is Auto: fuel                                   -->
     <!--  ======================================================  -->
     
-    <table class="t1"  id="table2">
+    <table class="t1"  id="table1">
       
       <!-- Creating the table headers -->
         <tr>
