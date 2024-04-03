@@ -25,21 +25,23 @@ function cleartotal() {
 function adder() {
    if (total > 0) { total = 0; }
 
-    console.log("init-num1");
-    console.log(num1);
-    console.log("init-num2");
-    console.log(num2);
+    console.log("init-num1", num1);
+    console.log("init-num2 , num2);
    
     var num1 = parseInt(document.getElementById("myform").elements["num1"].value);
     var num2 = parseInt(document.getElementById("myform").elements["num2"].value);
-   
+
     console.log("num1");
     console.log(num1);
     console.log("num2");
     console.log(num2);
+    console.log("num1a");
+    console.log(num1a);
+    console.log("num2a");
+    console.log(num2a);
    
-    var n1 = num1.toFixed(2);
-    var n2 = num2.toFixed(2);
+    var n1 = num1a.toFixed(2);
+    var n2 = num2a.toFixed(2);
    
     console.log("n1");
     console.log(n1);
