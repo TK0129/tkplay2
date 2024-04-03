@@ -25,8 +25,10 @@ function cleartotal() {
 function adder() {
    if (total > 0) { total = 0; }
 
-    console.log("num1");
+    console.log("init-num1");
     console.log(num1);
+    console.log("init-num2");
+    console.log(num2);
    
     var num1 = parseInt(document.getElementById("myform").elements["num1"].value);
     var num2 = parseInt(document.getElementById("myform").elements["num2"].value);
