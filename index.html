@@ -47,53 +47,107 @@
     <!--                         Start                            -->
     <!--  ======================================================  -->
     
-
+    
+    <button onclick="readtable()"> Call readtable </button><br><br>
+    <p id="p3">text here</p>
+    <p id="p4">data here</p>
+    <button onclick="test2()"> Call test2 </button><br><br>
     
     <!-- Creating the table headers -->
       <div>
       <table class="t2" id="table2">
 	  
         <tr>
-          <td>       Catgory/SubCatagory       						</td>
-          <td>       Lump Sum                					    	</td> 
-          <td>       Catagory Data        					     	</td> 
-          <td>       SubCatagory Data							</td>		  
+          <td>       Catgory/SubCatagory       						    	</td>
+          <td>       Lump Sum                					    	  	</td> 
+          <td>       Catagory Data        					     	    	</td> 
+          <td>       SubCatagory Data								</td>		  
         </tr>
 		
         <tr>
-          <td>       Auto          							</td>
-	  <td>										</td>
-          <td>       <input type="number" name="Auto">        				</td>
-	  <td>										</td>
+          <td>       Auto          								</td>
+	  <td>		 <input type="number" name="AutoTL" id="AutoTL" value="00.00">		</td>
+          <td>       <input type="number" name="Autoi" id="Autoi">        			</td>
+	  <td>		 <input type="number" name="Autotot" id="Autotot" value="00.00">	</td>
         </tr>
 		
 	<tr>
-          <td  style="padding-left:30px">       AAA Membership         			</td>
-	  <td>		<input type="number" name="AAAMemLS">				</td>
-	  <td>										</td>
-          <td>      <input type="number" name="AAAMem">        				</td>
+          <td  style="padding-left:30px">       AAA Membership         				</td>
+	  <td>		<input type="number" name="A1L">					</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A1">        					</td>
         </tr>
 		
 	<tr>
-          <td  style="padding-left:30px">       Alternate Transportation   		</td>
-	  <td>										</td>
-	  <td>										</td>
-          <td>      <input type="number" name="AutoAltTrans">        			</td>
+          <td  style="padding-left:30px">       Alternate Transportation   			</td>
+	  <td>											</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A2">        					</td>
+        </tr>	
+		
+		<tr>
+          <td  style="padding-left:30px">       Auto Loan				   	</td>
+	  <td>											</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A4">        					</td>
+		  
+	<tr>
+          <td  style="padding-left:30px">       Fuel					   	</td>
+	  <td>											</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A5">        					</td>
         </tr>	
 		
 	<tr>
-          <td  style="padding-left:30px">       Auto Loan				</td>
-          <td>										</td>
-	  <td>										</td>
-          <td>      <input type="number" name="AutoAutoLoan">        			</td>
-        </tr>	
+          <td  style="padding-left:30px">       Insurance				   	</td>
+	  <td>		<input type="number" name="A6L">					</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A6">        					</td>
+        </tr>
 		
+	<tr>
+          <td  style="padding-left:30px">       License					   	</td>
+	  <td>											</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A7">        					</td>
+		  
+	<tr>
+          <td  style="padding-left:30px">       Misc					   	</td>
+	  <td>											</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A8">        					</td>
+        </tr>
+		
+	<tr>
+          <td  style="padding-left:30px">       Registration			   		</td>
+	  <td>		<input type="number" name="A9L">					</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A9">        					</td>
+        </tr>
+		
+	<tr>
+          <td  style="padding-left:30px">       Service					   	</td>
+	  <td>											</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A10">        					</td>
+        </tr>
+		
+	<tr>
+          <td  style="padding-left:30px">       Smog Tests				   	</td>
+	  <td>											</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A11">        					</td>
+        </tr>
+		
+	<tr>
+          <td  style="padding-left:30px">       Tolls and FasTrak		   		</td>
+	  <td>											</td>
+	  <td>											</td>
+          <td>      <input type="number" name="A9">        					</td>
+        </tr>		
       </table>    <br />
       </div>
-    
-    <button onclick="readtable()"> Call readtable </button><br><br>
-    <p id="p3">text here</p>
-    <p id="p4">data here</p>
+
 
     <br /><br />   
     
@@ -104,191 +158,13 @@
     
 
     <!--  ======================================================  -->
-    <!--                     Main Data Table                      -->
+    <!--                Test Table for example                    -->
     <!--                           Start                          -->
-    <!--                   ===================                    -->
-    <!--    Variables are : Catagory|n 
-            where n is the subcatagory number  
-            i.e. auto4 is 4th subcatagory of auto, 
-            which is Auto: fuel                                   -->
     <!--  ======================================================  -->
+
     
     <table class="t1"  id="table1">
-      
-      <!-- Creating the table headers -->
-        <tr>
-          <th>       Catagory/Subcatagory               </th>
-          <th>       Lump Sum Payments for year         </th>          
-          <th>       Catagory data from Quicken         </th>
-          <th>       SubCatagory data from Quicken      </th>
-          <th>       SuSubCatagory data from Quicken    </th>
-          <th>       YTD Spending w/o lump sum          </th>
-          <th>       Lump Sum Payments Paid             </th>
-          <th>       Lump Sum Payments Not Paid         </th>
-          <th>       Taxes owed/paid from last year     </th>
-          
-        </tr>
-
-      <!-- Creating the Auto Rows START -->
-        <!-- Creating the 1st row - Auto     -->
-          <tr>
-            <td>  Auto                           </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-        </tr>
-        
-        <!-- Creating the 2nd row - Auto subcatagory : auto1         -->
-          <tr>
-            <td  style="padding-left:30px">  AAA Membership                  </td>
-            <td>  <input type="text" name="auto1l">   </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-  
-        <!-- Creating the 3rd row - Auto subcatagory : auto2         -->
-          <tr>
-            <td style="padding-left:30px">   Alternate Transportation       </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-
-      <!-- Creating the 4th row - Auto subcatagory : auto3         -->
-          <tr>
-            <td style="padding-left:30px">   Auto Loan       </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-
-      <!-- Creating the 5th row - Auto subcatagory : auto4         -->
-          <tr>
-            <td style="padding-left:30px">   Fuel       </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-
-      <!-- Creating the 6th row - Auto subcatagory : auto5         -->
-          <tr>
-            <td style="padding-left:30px">   Insurance       </td>
-            <td>   <input type="text" name="auto5l">   </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-
-      <!-- Creating the 7th row - Auto subcatagory : auto6         -->
-          <tr>
-            <td style="padding-left:30px">   License       </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-
-      <!-- Creating the 8th row - Auto subcatagory : auto7         -->
-          <tr>
-            <td style="padding-left:30px">   Misc       </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-
-      <!-- Creating the 9th row - Auto subcatagory : auto8         -->
-          <tr>
-            <td style="padding-left:30px">   Registration       </td>
-            <td>  <input type="text" name="auto8l">   </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-
-      <!-- Creating the 10th row - Auto subcatagory : auto9         -->
-          <tr>
-            <td style="padding-left:30px">   Service       </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-
-      <!-- Creating the 11th row - Auto subcatagory : auto1         -->
-          <tr>
-            <td style="padding-left:30px">   Smog Tests       </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-
-      <!-- Creating the 12th row - Auto subcatagory : auto11        -->
-          <tr>
-            <td style="padding-left:30px">   Tolls and FasTrak       </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-            <td>                                 </td>
-          </tr>
-      
-      <!-- Creating the Auto Rows END -->
-
-      
+ 
       <!-- Leaving as an example for later use       -->
         <tr>
           <td contenteditable="false">007</td>
