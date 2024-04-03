@@ -45,6 +45,39 @@ function adder() {
     document.getElementById("p1").innerHTML = total;
 }
 
+//  --------------------------  readdata to read data from table  -------------------------
+
+function readtable() {
+
+//gets table
+var oTable = document.getElementById('table2');
+
+//gets rows of table
+var rowLength = oTable.rows.length;
+
+//loops through rows    
+for (i = 0; i < rowLength; i++) {
+	
+	console.log("rows", i);
+	
+  //gets cells of current row  
+   var oCells = oTable.rows.item(i).cells;
+
+   //gets amount of cells of current row
+   var cellLength = oCells.length;
+	
+	console.log("do cells in current row");
+	
+   //loops through each cell in current row
+   for(var j = 0; j < cellLength; j++) {
+      // get your cell info here
+
+      var cellVal = oCells.item(j).innerHTML;
+      console.log(cellVal);
+   }
+}
+}
+
 //  --------------------------  test code below to learn  -------------------------
 
 //  function to add all the Lump Sum values
