@@ -27,8 +27,10 @@ function adder() {
    
     var num1 = parseInt(document.getElementById("myform").elements["num1"].value);
     var num2 = parseInt(document.getElementById("myform").elements["num2"].value);
+    var n1 = num1.toFixed(2);
+    var n2 = num2.toFixed(2);
   
-    total += num1 + num2;
+    total = n1 + n2;
     document.getElementById("p1").innerHTML = total;
 }
 
