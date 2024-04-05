@@ -21,38 +21,50 @@
     <script src="script.js" type="text/javascript"></script>
 
     
-    <a href="https://tk0129.github.io/tkplay2/index2.html"> doc read page index2</a>  <br /> <br />
-    <a href="https://tk0129.github.io/tkplay2/index3.html"> doc read page index3</a>  <br /> <br />
-    
-    
     <!--  ======================================================  -->
     <!--                   Input box test                         -->
     <!--                         Start                            -->
     <!--  ======================================================  -->
-    
-      <button onclick="cleartotal()"> Clear Total</button><br><br>
-    
-      <form id="myform">
-        First Number:   <input type="number" name="num1">  		<br /><br /> 
-        Second Number:  <input type="number" name="num2">  		<br /><br />
-      </form>
-    
-      <button onclick="adder()"> Submit</button><br><br>
-      <p id="p1">Results Are Here</p>
-
-      <br /><br />
-    
+		
+		
+	  
     <!--  ======================================================  -->
     <!--                   Year and Day Table                     -->
     <!--                         Start                            -->
     <!--  ======================================================  -->
     
-    
-    <button onclick="readtable()"> Call readtable </button><br><br>
-    <p id="p3">text here</p>
-    <p id="p4">data here</p>
-    <button onclick="test2()"> Call test2 </button><br><br>
-    
+	
+	<p>  click the browse button to load the LumpSum data from the saved file calling readlumpsumm  </p>
+    <input type="file" name="inputfilerls" id="inputfilerls" onclick="ReadLumpSumm()">
+    <pre id="outputrls"></pre>
+	
+	<br />
+
+	<p>  click the button to echo the lump summ array as a test for the global variables  </p>  
+	<input type="button" value="echo LumpSumm Array" onclick="WriteLumpSummArr()">
+    <pre id="outputwlsa"></pre>
+		
+		
+	<p>  ----------------------------------------------------------------------------------  </p>
+	<p>  click the browse button to load the Current Spending data from the saved file calling readcurrentspending  </p>
+    <input type="file" name="inputfilercs" id="inputfilercs" onclick="ReadCurrentSpending()">
+    <pre id="outputrcs"></pre>
+	
+	<br />
+	
+	<p>  click the button to echo the Current Spending as a test for the global variables  </p>  
+	<input type="button" value="echo CurrSpendArr" onclick="WriteCurrentSpendingArr()">
+    <pre id="outputwcsa"></pre>
+		
+	<p>  ----------------------------------------------------------------------------------  </p>	
+			<br />
+	
+ 	
+	<button onclick="LumpSum()"> Call to Calculate LumpSum </button>
+			<br />
+	
+	
+	
     <!-- Creating the table headers -->
       <div>
       <table class="t2" id="table2">
@@ -61,89 +73,90 @@
           <td>       Catgory/SubCatagory       						    	</td>
           <td>       Lump Sum                					    	  	</td> 
           <td>       Catagory Data        					     	    	</td> 
-          <td>       SubCatagory Data								</td>		  
+          <td>       SubCatagory Data										</td>		  
         </tr>
 		
         <tr>
-          <td>       Auto          								</td>
-	  <td>		 <input type="number" name="AutoTL" id="AutoTL" value="00.00">		</td>
-          <td>      	 <input type="number" name="Autoi" id="Autoi">        			</td>
-	  <td>		 <input type="number" name="Autotot" id="Autotot" value="00.00">	</td>
+          <td>       Auto          														</td>
+	<!--	  <td>		 <input type="number" name="AutoTL" id="AutoTL" value="00.00">		</td>  -->
+		  <td>		 <input id="AutoTL" contenteditable="false">						</td>
+          <td>       <input type="number" name="Autoi" id="Autoi">        				</td>
+		  <td>		 <input type="number" name="Autotot" id="Autotot" value="00.00">	</td>
         </tr>
 		
-	<tr>
-          <td  style="padding-left:30px">       AAA Membership         				</td>
-	  <td>		<input type="number" name="A1L">					</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A1">        					</td>
+		<tr>
+          <td  style="padding-left:30px">       AAA Membership         		</td>
+		  <td>		<input type="number" name="A1L" id="A1L">				</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A1">        					</td>
         </tr>
 		
-	<tr>
-          <td  style="padding-left:30px">       Alternate Transportation   			</td>
-	  <td>											</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A2">        					</td>
+		<tr>
+          <td  style="padding-left:30px">       Alternate Transportation   	</td>
+		  <td>																</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A2">        					</td>
         </tr>	
 		
 		<tr>
           <td  style="padding-left:30px">       Auto Loan				   	</td>
-	  <td>											</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A4">        					</td>
+		  <td>																</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A4">        					</td>
 		  
-	<tr>
+		<tr>
           <td  style="padding-left:30px">       Fuel					   	</td>
-	  <td>											</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A5">        					</td>
+		  <td>																</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A5">        					</td>
         </tr>	
 		
-	<tr>
+		<tr>
           <td  style="padding-left:30px">       Insurance				   	</td>
-	  <td>		<input type="number" name="A6L">					</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A6">        					</td>
+		  <td>		<input type="number" name="A6L" id="A6L">				</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A6">        					</td>
         </tr>
 		
-	<tr>
+		<tr>
           <td  style="padding-left:30px">       License					   	</td>
-	  <td>											</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A7">        					</td>
+		  <td>																</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A7">        					</td>
 		  
-	<tr>
+		<tr>
           <td  style="padding-left:30px">       Misc					   	</td>
-	  <td>											</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A8">        					</td>
+		  <td>																</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A8">        					</td>
         </tr>
 		
-	<tr>
-          <td  style="padding-left:30px">       Registration			   		</td>
-	  <td>		<input type="number" name="A9L">					</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A9">        					</td>
+		<tr>
+          <td  style="padding-left:30px">       Registration			   	</td>
+		  <td>		<input type="number" name="A9L" id="A9L">				</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A9">        					</td>
         </tr>
 		
-	<tr>
+		<tr>
           <td  style="padding-left:30px">       Service					   	</td>
-	  <td>											</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A10">        				</td>
+		  <td>																</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A10">        				</td>
         </tr>
 		
-	<tr>
+		<tr>
           <td  style="padding-left:30px">       Smog Tests				   	</td>
-	  <td>											</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A11">        				</td>
+		  <td>																</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A11">        				</td>
         </tr>
 		
-	<tr>
-          <td  style="padding-left:30px">       Tolls and FasTrak		   		</td>
-	  <td>											</td>
-	  <td>											</td>
-          <td>      	<input type="number" name="A9">        					</td>
+		<tr>
+          <td  style="padding-left:30px">       Tolls and FasTrak		   	</td>
+		  <td>																</td>
+		  <td>																</td>
+          <td>      <input type="number" name="A9">        					</td>
         </tr>		
       </table>    <br />
       </div>
