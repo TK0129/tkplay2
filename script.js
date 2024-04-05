@@ -1,12 +1,137 @@
 var total = 0;
 var totall = 0;
+var LumpSummArr = [];
+var CurrSpendArr = [];
 
+//---------------------------------------------------------------------------------
+//-----------  Write the Lump Sum Array to verify globally saved         ----------
+//---------------------------------------------------------------------------------
+function WriteLumpSummArr() {
 
-function cleartotal() {
-   total = 0;
-    document.getElementById("p1").innerHTML = total;
+var file = document.getElementById('inputfile');
+
+// This script will actually read from a file into an array, and output to web page
+// and output to the console log
+	
+	if (LumpSummArr.length === 0) {
+		alert("Error: LumpSummArr is empty, please read the LumpSumm File prior to echoing");
+		console.log("Error: LumpSummArr is empty, please read the LumpSumm File prior to echoing");	
+	}
+    console.log("WriteLumpSummArr start");
+
+    console.log("LumpSummArr", LumpSummArr);
+ 
+	console.log("WriteLumpSummArr end");
+	
+	document.getElementById('outputwlsa').textContent=LumpSummArr.join("");
+	
 }
 
+//---------------------------------------------------------------------------------
+//-----------  Write the Lump Sum Array to verify globally saved         ----------
+//---------------------------------------------------------------------------------
+function WriteCurrentSpendingArr() {
+
+var file = document.getElementById('inputfile');
+
+// This script will actually read from a file into an array, and output to web page
+// and output to the console log
+	
+	if (CurrSpendArr.length === 0) {
+		alert("Error: CurrSpendArr is empty, please read the CurrentSpending File prior to echoing");
+		console.log("Error: CurrSpendArr is empty, please read the CurrentSpending File prior to echoing");	
+	}
+    console.log("WriteCurrentSpending start");
+
+    console.log("WriteCurrentSpending", CurrSpendArr);
+ 
+	console.log("WriteCurrentSpending end");
+	
+	document.getElementById('outputwcsa').textContent=LumpSummArr.join("");
+	
+}
+
+
+//---------------------------------------------------------------------------------
+//-----------  read the lump sum file and store into an ARRAY            ----------
+//---------------------------------------------------------------------------------
+function ReadLumpSumm() {
+
+var file = document.getElementById('inputfilerls');
+var line = 0;
+var txtArr = [];
+
+// This script will actually read from a file into an array, and output to web page
+// and output to the console log
+
+    console.log("read lumpsum start");
+
+    file.addEventListener('change', () => {
+      //var txtArr = [];
+      var fr = new FileReader();
+      fr.onload = function() {
+        // By lines
+        var lines = this.result.split('\n');
+        for (line = 0; line < lines.length; line++) {
+            txtArr = [...txtArr, ...(lines[line].split("\r\n"))];
+		//	console.log("txtArr - 1", txtArr);
+        }
+      } ;
+      fr.onloadend = function() {
+        console.log("txtArr - 2", txtArr);
+		LumpSummArr = txtArr;
+		document.getElementById('outputrls').textContent=txtArr.join("");
+      } ;
+
+
+    fr.readAsText(file.files[0]);
+}) ;
+
+	console.log("read lumpsum end");
+   //           txtArr = [...txtArr, ...(lines[line].split(";"))];
+}
+
+//---------------------------------------------------------------------------------
+//-----------  read the current spending file and store into an ARRAY    ----------
+//---------------------------------------------------------------------------------
+function ReadCurrentSpending() {
+  
+var file = document.getElementById('inputfilercs');
+
+// This script will actually read from a file into an array, and output to web page
+// and output to the console log
+
+console.log("read currentspending start");
+  
+file.addEventListener('change', () => {
+    var txtArr = [];
+    var fr = new FileReader();
+    fr.onload = function() {
+        // By lines
+        var lines = this.result.split('\n');
+        for (var line = 0; line < lines.length; line++) {
+            txtArr = [...txtArr, ...(lines[line].split("\r\n"))];
+		//	console.log("txtArr", txtArr);
+        }
+    } ;
+    fr.onloadend = function() {
+        console.log(txtArr);
+		CurrSpendArr = txtArr;
+        document.getElementById('outputrcs').textContent=txtArr.join("");
+    } ;
+
+    fr.readAsText(file.files[0]);
+}) ;
+ 
+	console.log("read currentspending end");
+   //           txtArr = [...txtArr, ...(lines[line].split(";"))];
+}
+
+
+//---------------------------------------------------------------------------------
+// ----------  example on reading two numbers from web page, adding      ----------
+// ----------  the number, dump to consol and write out to web page      ----------
+//---------------------------------------------------------------------------------
 function adder() {
    if (total > 0) { total = 0; }
 
@@ -30,8 +155,18 @@ function adder() {
     document.getElementById("p1").innerHTML = total;
 }
 
-//  --------------------------  Code to Total Lump sum column  -------------------------
+//---------------------------------------------------------------------------------
+//---------  Code to Clear the Test Table calculated sum                -----------
+//---------------------------------------------------------------------------------
 
+function cleartotal() {
+   total = 0;
+    document.getElementById("p1").innerHTML = total;
+}
+
+//---------------------------------------------------------------------------------
+//  --------------------------  Code to Total Lump sum column  -------------------------
+//---------------------------------------------------------------------------------
 
 function LumpSum() {
 
@@ -57,8 +192,19 @@ function LumpSum() {
 }
 
 
-//  --------------------------  readdata to read data from table  -------------------------
 
+//  -------------------------------------------------------------------------------
+//  --------------------------  test code below to learn  -------------------------
+//  --------------------------  test code below to learn  -------------------------
+//  --------------------------  test code below to learn  -------------------------
+//  --------------------------  test code below to learn  -------------------------
+//  -------------------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------------------
+//  --------------------------  readdata to read data from table  -------------------------
+//    does not seem to work, just keeping in case 
+//---------------------------------------------------------------------------------
 function readtable() {
 
 //gets table
@@ -90,7 +236,6 @@ for (i = 0; i < rowLength; i++) {
 }
 }
 
-//  --------------------------  test code below to learn  -------------------------
 
 //  function to test reading a table cell and storing it in an array 
 //  one element from the array is stored into the table as a test 
@@ -157,4 +302,41 @@ for (var r = 0; r < t1.rows.length; r++) {
     console.log(t1); // [1, 2, 3 ... 9]
 
   console.log("data end");
+}
+
+//---------------------------------------------------------------------------------
+// ----------  writefile test                                            ----------
+//   does not work - think I need to use local firefox data                  
+//---------------------------------------------------------------------------------
+function writefile() {
+	
+  console.log("writefile start");
+	
+    var textToSave = document.getElementById("inputTextToSave").value;
+    var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    var downloadLink = document.createElement("a");
+	
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    if (window.webkitURL != null)
+    {
+        // Chrome allows the link to be clicked
+        // without actually adding it to the DOM.
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    }
+    else
+    {
+        // Firefox requires the link to be added to the DOM
+        // before it can be clicked.
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+    }
+
+    downloadLink.click();
+	
+	console.log("writefile end");
+	  
 }
